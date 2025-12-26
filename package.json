@@ -1,11 +1,26 @@
 {
   "name": "FinEx",
-  "main": "https://spectacular-cassata-9b01ce.netlify.app",
-  "window": {
-    "title": "FinEx Energy System",
-    "width": 1200,
-    "height": 800,
-    "toolbar": false,
-    "icon": "LOGO.jpg"
+  "private": true,
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "build": "remix build",
+    "dev": "remix dev --manual",
+    "start": "remix-serve ./build/index.js",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@remix-run/netlify": "latest",
+    "@remix-run/node": "latest",
+    "@remix-run/react": "latest",
+    "@supabase/supabase-js": "latest",
+    "isbot": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "latest",
+    "typescript": "latest",
+    "vite": "latest"
   }
 }
