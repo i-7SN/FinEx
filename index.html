@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FinEx Energy Systems</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#00AEEF">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0f172a;
+      color: #f8fafc;
+      overflow-x: hidden;
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+    
+    /* Light Theme Support */
+    .light-theme {
+      background-color: #f1f5f9;
+      color: #1e293b;
+    }
+    .light-theme main h2 { color: #1e293b; }
+    .light-theme aside { background-color: #ffffff; border-color: #e2e8f0; }
+    .light-theme aside nav button { color: #64748b; }
+    .light-theme aside nav button:hover { background-color: #f8fafc; }
+    .light-theme .bg-\[\#1e293b\] { background-color: #ffffff; border-color: #e2e8f0; }
+    .light-theme .bg-slate-950 { background-color: #ffffff; border-color: #e2e8f0; }
+    .light-theme .bg-slate-900 { background-color: #f8fafc; border-color: #e2e8f0; }
+    .light-theme .bg-slate-900\/50 { background-color: #f8fafc; }
+    .light-theme .bg-slate-950\/50 { background-color: #f1f5f9; }
+    .light-theme .text-white { color: #0f172a; }
+    .light-theme .text-slate-400 { color: #64748b; }
+    .light-theme .text-slate-500 { color: #94a3b8; }
+    .light-theme .border-slate-800 { border-color: #f1f5f9; }
+    .light-theme .border-slate-700 { border-color: #e2e8f0; }
+    .light-theme .shadow-2xl { shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.05); }
+
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #1e293b;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 3px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #00AEEF;
+    }
+
+    @keyframes pulse-glow {
+      0% { text-shadow: 0 0 5px rgba(0, 174, 239, 0.1); opacity: 0.95; }
+      50% { text-shadow: 0 0 20px rgba(0, 174, 239, 0.5); opacity: 1; }
+      100% { text-shadow: 0 0 5px rgba(0, 174, 239, 0.1); opacity: 0.95; }
+    }
+    .animate-finex-glow {
+      animation: pulse-glow 4s ease-in-out infinite;
+    }
+
+    .font-tech {
+      font-family: 'Orbitron', sans-serif;
+    }
+    
+    .page-transition {
+      animation: fadeIn 0.4s ease-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch(err => console.log('SW registration failed:', err));
+      });
+    }
+  </script>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

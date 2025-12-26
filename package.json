@@ -1,0 +1,11 @@
+{
+  "name": "FinEx",
+  "main": "https://spectacular-cassata-9b01ce.netlify.app",
+  "window": {
+    "title": "FinEx Energy System",
+    "width": 1200,
+    "height": 800,
+    "toolbar": false,
+    "icon": "LOGO.jpg"
+  }
+}

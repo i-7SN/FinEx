@@ -1,0 +1,9 @@
+
+{
+  "name": "FinEx Energy Accounting System",
+  "description": "A high-end executive accounting dashboard for oil and gas operations with 149 specialized accounts and AI-driven data entry.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
